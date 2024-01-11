@@ -12,6 +12,6 @@
  * 輸入: []
  * 輸出: 0
  */
-export function arraySum(numbers: number[]): number {
+export function arraySum(numbers: number[]) {
   return numbers.reduce((a, b) => a + b, 0);
 }
