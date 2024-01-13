@@ -7,19 +7,13 @@
 
 // 請在下方寫下你的程式碼
 
-// export async function fetchData(url: string){
-//   const res = await fetch(url);
-
-//   const data = (await res.json()) as {
-//     userId: number;
-//     id: number;
-//     title: string;
-//     completed: boolean;
-//   };
-//   return data;
-// }
-export const fetchData = async (url: string): Promise<string> => {
+export async function fetchData(url: string){
   const res = await fetch(url);
-  const data = await res.json();
+  const data = (await res.json()) as {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
+  };
   return data;
-};
+}
