@@ -9,5 +9,14 @@
  * @returns - 回傳轉換後的大寫字串
  */
 export function toUpperCase(str: string): string {
-    // 請在此處寫下你的程式碼
+  let ans = "";
+  for (let i = 0; i < str.length; i++) {
+    let code = str.charCodeAt(i);
+    if (code >= 97 && code <= 122) {
+      ans += String.fromCharCode(code - 32);
+    } else {
+      ans += str[i];
+    }
+  }
+  return ans;
 }
